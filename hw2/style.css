@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(0deg, red, blue);
+}
+
+#layer1 {
+    background-color: #fc0; /* Цвет фона слоя */
+    max-width: 600px; /* Ширина слоя */
+    min-height: 100px; /* Высота слоя */
+    float: left;
+}
+  
+#layer2 {
+    background-color: #c0c0c0; /* Цвет фона слоя */
+    width: 600px; /* Ширина слоя */
+    min-height: 100px; /* Высота слоя */
+    float: left; /* Обтекание по правому краю */
+    
+}
+  
+#layer3 {
+    background: linear-gradient(to top, #fefcea, #FF7F50);
+    max-width: 600px; /* Ширина слоя */
+    min-height: 100px; /* Высота слоя */
+    float: left; /* Обтекание по правому краю */
+}
+  
+#layer4 {
+    background: linear-gradient(to top, #fef, orange);
+    width: 600px; /* Ширина слоя */
+    min-height: 100px; /* Высота слоя */
+    float: left; /* Обтекание по правому краю */
+}
+  
+  .layer {
+        float: left;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid white;
+  }
+  
+  div {
+        padding: 5px; /* Поля вокруг текста */
+        margin: 5px;
+  }
