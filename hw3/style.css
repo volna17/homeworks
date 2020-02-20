@@ -1,0 +1,21 @@
+body {
+    font: 1em sans-serif;
+}
+
+#reg_form {
+    width: 270px;
+    padding: 10px;
+    border: 1px solid steelblue;
+    border-radius: 10px;
+    margin: 0 auto;
+    background: linear-gradient(to top, #fdfcfb, #e2d1c3);
+}
+
+input {
+    height: 30px;
+    width: 260px;
+    font: 1.2em sans-serif;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
