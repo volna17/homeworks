@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Site</title>
+        <link rel="stylesheet" href="style.css"> <!--ПОДКЛЮЧЕНИЕ файла стилей-->
+
+        <style>
+            .conteiner-1 {
+                display: flex;
+            }
+
+            div {
+                padding: 10px;
+                margin: 5px;
+                border: 1px solid black;
+            }
+
+            .block-1 {
+                flex: 1;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .block-2 {
+                flex: 2;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            .block-3 {
+                flex: 1;
+                font-family: 'Courier New', Courier, monospace;
+            }            
+            
+            .conteiner-2 {
+                display: flex;
+            }
+            
+            .block-4 {
+                flex: 1;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+
+            .block-5 {
+                flex: 1;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .shadow {
+                box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+                padding: 10px;
+            }
+
+        </style>
+
+        <script>
+            var hobby = new Array("волейбол", "гольф", "футбол", "баскетбол", "шахматы");
+            
+            //  document.body.onload = addElements;
+
+            function addElements() {
+                container = document.getElementById("container");
+                var newh1 = document.createElement("h1");
+                newh1.innerHTML = "Я люблю ";
+                container.appendChild(newh1);
+                for (var i=0; i<hobby.length; i++) {
+                    
+                    var newDiv = document.createElement("div");
+                    newDiv.className = "shadow block-"+(i+1);
+                    
+                    if (i==hobby.length-1) {
+                        newDiv.innerHTML = "и "+hobby[i];
+                    } else if (i==hobby.length-2) {
+                        newDiv.innerHTML =   hobby[i];
+                    } else newDiv.innerHTML =   hobby[i]+",";
+                    container.appendChild(newDiv);
+                }
+                
+            }
+        </script>
+
+    </head>
+    <body onload="addElements();">
+
+        <div class="conteiner-1" id="container">
+
+        </div>     
+
+    </body>
+</html>
