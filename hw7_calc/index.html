@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Site</title>
+        <link rel="stylesheet" href="style.css"> <!--ПОДКЛЮЧЕНИЕ файла стилей-->
+
+        <style>
+            input[type=number], input[type=text] {
+                width: 95px;
+            }
+
+            input[type=button] {
+                width: 75px;
+            }
+
+        </style>
+
+        <script>
+
+            function add() {  //обьявление функцыи
+                document.getElementById("operation").innerText="+";
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var c = parseInt(a) + parseInt(b);
+                document.getElementById("result").value = c;
+            }
+
+            function minus() {  //обьявление функцыи
+                document.getElementById("operation").innerText="-";
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var c = parseInt(a) - parseInt(b);
+                document.getElementById("result").value = c;
+            }
+
+            function multiply() {  //обьявление функцыи
+                document.getElementById("operation").innerText="*";
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var c = parseInt(a) * parseInt(b);
+                document.getElementById("result").value = c;
+            }
+
+            function division() {  //обьявление функцыи
+                document.getElementById("operation").innerText="/";
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                var c = parseInt(a) / parseInt(b);
+                document.getElementById("result").value = c;
+            }
+        </script>
+
+    </head>
+    <body>    
+        <input type="number" id="a"><span id="operation">+</span>
+        <input type="number" id="b"><span>=</span>
+        <input type="text" id="result"><br>
+
+        <input type="button" value="+" onclick="add();">
+        <input type="button" value="-" onclick="minus();">
+        <input type="button" value="*" onclick="multiply();">
+        <input type="button" value="/" onclick="division();">
+    </body>
+</html>
