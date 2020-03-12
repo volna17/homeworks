@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+        let todoArr = []
+
+        function addItem () {
+            let input = document.getElementById("input"); //получаем импут по id
+            todoArr.unshift(input.value);//добавляем в начало массива значение импута
+            input.value = '';//очищаем инпут
+            console.log('arr', todoArr);//выводим массив в консоль
+            showElements(todoArr);//выводим елемент массива
+        }
+
+        function removeItem (index) {
+            var deletedItem = todoArr.splice(index,1);//удаляем елемент по индексу
+            console.log('deleted', deletedItem);//выводим удаленый елемент в консоль
+            showElements(todoArr);//выводим елемент массива
+        }
+
+        function showElements(arr) {
+            let html = ''
+            arr.forEach((item, index) => {
+                html += '<li id="item">' + item + `<button onclick=removeItem(${index}) id="remove">x</button></li>`;
+            })
+            document.getElementById('list').innerHTML = html;
+        }
+
+        function init() {//при загрузке страницы
+            $("#show_link").hide();//срываем 
+        }
+
+        function hideE() {//при скрывании елемента
+            $("#todos").hide();//прячем лист
+            $("#hide_link").hide();
+            $("#show_link").show();
+        }
+
+        function showE() {
+            $("#todos").show();//показываем лист
+            $("#hide_link").show();
+            $("#show_link").hide();
+        }
+    </script>
+</head>
+<body onload="init();">
+    <div> 
+        <input type="text" id="input" /> 
+        <button onclick="addItem()">Add</button><br>
+        <a href="#" id="hide_link" onclick="hideE();">скрыть</a>
+        <a href="#" id="show_link" onclick="showE();">показать</a>
+        
+        <div id="todos"><ul id="list"></ul></div> 
+    </div> 
+</body>
+</html>
