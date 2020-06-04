@@ -1,0 +1,113 @@
+body {
+    font: 1em sans-serif;
+    background-image: url(imgs/bg.jpg);
+    background-repeat: repeat-y;
+    background-position: center;
+    /*background-color: #f88d44;*/
+    
+}
+
+#reg_form {
+    width: 587px;
+    height: 587px;
+    
+    border: 1px solid rgb(76, 2, 78);
+    
+    margin: 35px auto;
+    background-color: #e0e0e2;
+}
+
+#form_title {
+    padding-top: 90px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+h1 {
+    margin: 0px;
+    color: #2a323b;
+    font-size: 32px;
+    
+}
+
+#form_title a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#form_title a.under_line {
+    border-bottom: 1px solid white;
+}
+
+
+
+#form_imput {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+}
+
+#form_buttons {
+    text-align: left;
+    margin-top: 40px;
+    width: 100%;
+}
+
+#form_buttons input[type=submit] {
+    width: 220px;
+    height: 75px;
+    background-color: #e86657;
+    font-size: 25px;
+    color: white;
+    border: 0;
+}
+
+ input[type=checkbox] {
+    height: 15px;
+}
+
+#form_button {
+    display: inline-block;
+    width: 220px;
+}
+
+#form_check {
+    width: 255px;
+    color: #3f424b;
+    display: inline-block;
+    text-align: right;
+}
+
+
+#form_check a {
+    text-decoration: none;
+    color: #3f424b;
+}
+
+input[type=text], input[type=password] {
+      width: 100%;
+      height: 75px;
+      padding: 12px 20px 12px 100px;
+      margin: 10px 0;
+      font-size: 20px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;     
+}
+
+.icon_username {
+    background-image: url(imgs/login.jpg);
+    background-repeat: no-repeat;
+}
+
+.icon_password {
+    background-image: url(imgs/lock.jpg);
+    background-repeat: no-repeat;
+}
+
+
+
+
